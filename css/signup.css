@@ -1,0 +1,43 @@
+
+		.toast{
+			width: 75%;
+			height:5%;
+			font-family: 'Roboto', sans-serif;
+			color: #fff;
+			background: #4A148C;
+			text-align: center;			
+			position: fixed;
+			left: 2%;
+			right: 0;
+			bottom: 4%;
+		}
+		.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+

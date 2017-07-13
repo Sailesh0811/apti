@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signin</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+</head>
+<body  >
+<div id="signUp">
+
+	<input type="text" name="regno" v-model="regno" v-on:change="checkreg">
+	<input type="password" name="password" id="password" v-model="password"  v-on:change="checkpassword">
+	<input type="button" name="signin" id="signin" v-on:click="sub" value="Signin" v-show="error">
+</div>
+
+<script type="text/javascript" src="js/adminsignin.js"></script>
+</body>
+</html>

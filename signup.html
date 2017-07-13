@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/signup.css">
+</head>
+<body>
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModalLong">Rules</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./signin.html" target="_blank">Sign In</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./signup.html" target="_blank">Sign Up</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./leader.php" target="_blank">Leader Board</a>
+  </li>  
+</ul>
+<div id="signUp" class="container" style="margin-top: 10%;">
+<div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Register No 1</label>
+  <div class="col-4	">
+    <input class="form-control" type="text" value="" v-model="regno" id="example-text-input" v-on:change="checkreg">
+  </div>
+  <label for="example-text-input" class="col-2 col-form-label">Name 1</label>
+  <div class="col-4">
+    <input class="form-control" type="text" value="" v-model="name" id="example-text-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Register No 2</label>
+  <div class="col-4">
+    <input class="form-control" type="text" value="" v-model="regno2" id="example-text-input" v-on:change="checkreg1">
+  </div>
+  <label for="example-text-input" class="col-2 col-form-label">Name 2</label>
+  <div class="col-4">
+    <input class="form-control" type="text" value="" v-model="name2" id="example-text-input">
+  </div>
+</div>
+
+
+<div class="form-group row right">
+	<button type="button" name="signup" id="signup" v-on:click="sub" v-show="error" class="btn btn-primary btn-lg btn-block">SignUp</button>
+</div>
+
+
+	</div>
+<div id="toast"> 
+ <transition name="bounce">
+   <div v-if="show" class="toast">{{toast}}</div>
+  </transition>
+  </div>
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Rules</h5>
+      </div>
+      <div class="modal-body">
+       <b> Instruction:</b><br>
+
+1.Select the sign-up tab in the header(Top of the webpage).<br>
+2.Finish the sign-up and you will be redirected back to the previous page.<br>
+3.Now, select sign-in tab and enter your details to login.<br>
+4.You will be redirected to a page and asked to enter the contest code.<br>
+5.Once the contest is about to commence, the contest code will be shared with you in the chat box in the bottom left corner. <br>
+<br>
+<b>Rules:</b><br>
+1.Maximum of 2 per team.<br>
+2.The browser will switch over to full-screen mode and if you leave the full-screen the contest will end immediately.<br>
+3.For any queries regarding the questions, use the chatbox in the left hand corner of the screen.<br>
+4.All students are required participate in this contest. Failure to do so, will face harsh reprecussions.<br>
+      </div>
+      <div class="modal-footer">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/signup.js"></script>
+</body>
+</html>
